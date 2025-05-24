@@ -1,0 +1,211 @@
+/* === Thiết lập cơ bản cho toàn trang === */
+body {
+  font-family: Arial, sans-serif; /* Chọn font chữ */
+  margin: 0; /* Xóa lề ngoài */
+  padding: 0; /* Xóa khoảng cách trong */
+  background-color: #fffafc; /* Màu nền nhẹ nhàng */
+}
+
+/* === Header (tiêu đề đầu trang) === */
+header {
+  background-color: #b86cb9; /* Màu nền tím */
+  color: white; /* Chữ trắng */
+  padding: 20px; /* Khoảng cách bên trong */
+  text-align: center; /* Căn giữa nội dung */
+}
+
+header h1 {
+  margin: 0; /* Xóa khoảng cách mặc định */
+  font-size: 28px; /* Cỡ chữ lớn */
+  letter-spacing: 1px; /* Tăng khoảng cách chữ nhẹ */
+}
+
+/* === Thanh menu điều hướng === */
+nav {
+  background-color: #e6aed8df; /* Màu hồng nhạt */
+  padding: 10px 0; /* Trên dưới 10px */
+}
+
+nav ul {
+  list-style: none; /* Xóa dấu chấm đầu dòng */
+  display: flex; /* Hiển thị dạng hàng ngang */
+  justify-content: center; /* Căn giữa ngang */
+  align-items: center; /* Căn giữa dọc */
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 50px; /* Khoảng cách giữa các mục */
+}
+
+nav ul li a {
+  text-decoration: none; /* Xóa gạch dưới */
+  color: #333; /* Màu chữ xám đậm */
+  font-weight: bold; /* In đậm */
+  transition: color 0.2s ease; /* Hiệu ứng chuyển màu khi hover */
+}
+
+nav ul li a:hover {
+  color: #92238f; /* Màu khi di chuột vào */
+}
+
+/* === Icon giỏ hàng === */
+.cart-icon {
+  font-size: 24px; /* Tăng kích thước icon */
+  vertical-align: middle; /* Căn giữa theo dòng */
+}
+
+/* === Phần nội dung chính === */
+main {
+  padding: 30px 20px; /* Khoảng cách trong */
+  text-align: center; /* Căn giữa nội dung */
+}
+
+main h2 {
+  font-size: 24px; /* Cỡ chữ lớn vừa */
+  margin-bottom: 10px; /* Cách dưới 20px */
+  color: #280429; /* Màu tím đậm */
+}
+
+/* === Danh sách sản phẩm === */
+.product-list {
+  display: flex; /* Hiển thị sản phẩm theo hàng ngang */
+  justify-content: center; /* Căn giữa hàng */
+  flex-wrap: wrap; /* Tự xuống dòng nếu quá rộng */
+  gap: 20px; /* Khoảng cách giữa các sản phẩm */
+}
+
+.product {
+  border: 1px solid #e6aed8; /* Viền hồng nhạt */
+  border-radius: 8px; /* Bo góc */
+  padding: 15px; /* Khoảng cách bên trong */
+  width: 220px; /* Chiều rộng cố định */
+  background-color: white; /* Nền trắng */
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1); /* Đổ bóng nhẹ */
+  transition: transform 0.2s ease; /* Hiệu ứng khi hover */
+  text-align: center; /* Căn giữa chữ trong thẻ */
+}
+
+.product:hover {
+  transform: translateY(-5px); /* Khi rê chuột, sản phẩm nhô lên một chút */
+}
+
+.product img {
+  width: 100%; /* Ảnh chiếm toàn bộ chiều ngang thẻ */
+  height: auto; /* Chiều cao tự động */
+  border-radius: 6px; /* Bo góc ảnh */
+}
+
+.product h3 {
+  /*margin: 10px 0 5px; /* Cách trên 10px, dưới 5px */
+  color: #92238f; /* Màu tiêu đề tím */
+}
+
+.product p {
+  margin: 0% ; /* Cách đều trên dưới */
+  font-size: 16px; /* Cỡ chữ nhỏ */
+}
+
+/* === Phần chân trang === */
+footer {
+  background-color: #e6aed8df; /* Màu nền hồng nhạt */
+  color: #5e235f; /* Màu chữ tím đậm */
+  text-align: center; /* Căn giữa nội dung */
+  padding: 20px;
+  margin-top: 0%; /* Cách nội dung phía trên */
+  font-size: 15px; /* Cỡ chữ nhỏ */
+}
+.banner-container {
+  position: relative;
+  text-align: center;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  /*background-color: rgba(253, 137, 137, 0.4); /* nền đen trong suốt */
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.feedback-section {
+  margin-top: 300px;
+  text-align: center;
+}
+
+.feedback-section h2 {
+  color: #92238f;
+  margin-bottom:  20px;
+}
+
+#feedback-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+
+#feedback-form input,
+#feedback-form textarea,
+#feedback-form select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+#feedback-form button {
+  padding: 10px 20px;
+  background-color: #b86cb9;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+#feedback-form button:hover {
+  background-color: #92238f;
+}
+
+#feedback-list {
+  margin-top: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.feedback-item {
+  background-color: #fff;
+  border: 1px solid #e6aed8;
+  border-radius: 6px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.modal {
+  display: none; position: fixed; z-index: 1000; left: 0; top: 0;
+  width: 100%; height: 100%; overflow: auto; background: rgba(0,0,0,0.5);
+}
+.modal-content {
+  background: #fff; margin: 10% auto; padding: 20px; border-radius: 8px;
+  width: 90%; max-width: 400px; position: relative;
+}
+.close {
+  position: absolute; top: 10px; right: 20px; font-size: 28px; cursor: pointer;
+}

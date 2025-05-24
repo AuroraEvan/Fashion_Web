@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<script>
+  const form = document.getElementById('feedback-form');
+  const list = document.getElementById('feedback-list');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const rating = document.getElementById('rating').value;
+    const comment = document.getElementById('comment').value;
+
+    const item = document.createElement('div');
+    item.classList.add('feedback-item');
+    item.innerHTML = `<strong>${name}</strong> - ${rating}<br><em>${comment}</em>`;
+
+    list.prepend(item); // thêm mới lên đầu
+    form.reset(); // xóa nội dung form
+  });
+</script>
+<body>
+  <header><h1>WOMEN FASHION</h1></header>
+  <nav>
+    <ul>
+    <li><a href="home.html">Home</a></li>
+      <li><a href="product.html">Product</a></li>
+      <li><a href="cart.html"> Cart <span class="cart-icon">🛒</span></a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    </nav> 
+  <main>
+  <hr>
+<section class="feedback-section">
+  <h2>Rate your experience</h2>
+  <form id="feedback-form">
+    <input type="text" id="name" placeholder="Your Name" required />
+    
+    <select id="rating" required>
+      <option value="">Satisfaction level</option>
+      <option value="⭐">⭐</option>
+      <option value="⭐⭐">⭐⭐</option>
+      <option value="⭐⭐⭐">⭐⭐⭐</option>
+      <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+      <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+    </select>
+    
+    <textarea id="comment" placeholder="Your feelings" required></textarea>
+    
+    <button type="submit">Send Feedback</button>
+  </form>
+
+  <div id="feedback-list">
+    <!-- Đánh giá sẽ hiện ở đây -->
+     
+  </div>
+</section>
+  </main>
+    <footer>
+    <p>📞 Phone number: 0123 456 789 | ✉️ Email: thoitrangnu@example.com</p>
+    <p>© 2025 WOMEN FASHION</p>
+  </footer>
+</body>
+</html>
